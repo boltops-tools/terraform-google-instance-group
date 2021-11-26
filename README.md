@@ -7,13 +7,17 @@ Simple example with [google_compute_instance_group](https://registry.terraform.i
 ## Add to Terrafile
 
 ```ruby
-mod "instance_group", source: "boltops-tools/terraform-google-instance-group"
+mod "instance-group", source: "boltops-tools/terraform-google-instance-group"
 ```
+
+## Import Example
+
+    terraspace bundle example instance-group mig
 
 ## Deploy
 
-    terraspace up vm
+    terraspace up mig
 
 ## Clean Up
 
-    terraspace down vm
+    terraspace down mig
