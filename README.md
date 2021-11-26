@@ -2,7 +2,7 @@
 
 [![BoltOps Badge](https://img.boltops.com/boltops/badges/boltops-badge.png)](https://www.boltops.com)
 
-Simple example with [google_compute_instancne_group](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance_group)
+Simple example with [google_compute_instance_group](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance_group)
 
 ## Add to Terrafile
 

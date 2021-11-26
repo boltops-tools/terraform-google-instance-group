@@ -89,12 +89,12 @@ variable disk_size_gb {
 
 variable preemptible {
   description = "Use preemptible instances - lower price but short-lived instances. See https://cloud.google.com/compute/docs/instances/preemptible for more details"
-  default     = true  # TODO: change back to false before release
+  default     = false
 }
 
 variable automatic_restart {
   description = "Automatically restart the instance if terminated by GCP - Set to false if using preemptible instances"
-  default     = false # TODO: change back to true before release
+  default     = false
 }
 
 # google_compute_instance_group_manager
@@ -111,7 +111,8 @@ variable base_instance_name {
 
 variable target_size {
   description = "The target number of running instances for this managed instance group. This value should always be explicitly set unless this resource is attached to an autoscaler, in which case it should never be set."
-  default     = "2"
+  type        = number
+  default     = 1
 }
 
 variable zone {
