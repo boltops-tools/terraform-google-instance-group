@@ -1,9 +1,10 @@
 module "mig" {
   source = "../.."
-  ns     = local.ns
+  ns     = var.ns
 
-  network                 = local.network
-  subnetwork              = local.subnetwork
+  network                 = var.network
+  subnetwork              = var.subnetwork
+  preemptible             = var.preemptible
+  target_size             = var.target_size
   metadata_startup_script = file("${path.module}/script/startup_script.sh")
-  target_size             = 1
 }
